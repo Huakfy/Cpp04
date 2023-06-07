@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 10:49:23 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/07 11:42:59 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/07 11:51:47 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int main()
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
-	//...
 
 	const WrongAnimal* k = new WrongAnimal();
 	const WrongAnimal* l = new WrongCat();
@@ -37,5 +36,11 @@ int main()
 	k->makeSound();
 	l->makeSound();
 
+	std::cout << std::endl;
+	delete meta;
+	delete j;
+	delete i;
+	delete k;
+	delete l;
 	return 0;
 }
