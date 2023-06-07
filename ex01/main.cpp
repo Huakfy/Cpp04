@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 10:49:23 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/07 15:27:44 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/07 15:39:46 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,24 @@ int main()
 	std::cout << "1:" << (*(Dog *)test[0]).getIdea(0) << "\n2:" << (*(Dog *)test[1]).getIdea(0) << std::endl;
 
 	std::cout << std::endl;
+
+
+	std::cout << "Même chose avec Cat" << std::endl;
+	(*(Cat *)test[5]).setIdea("I'm a Cat Meow", 0);
+	std::cout << "Impression de la première idée des 2 premiers Cat" << std::endl;
+	std::cout << "1:" << (*(Cat *)test[5]).getIdea(0) << "\n2:" << (*(Cat *)test[6]).getIdea(0) << std::endl;
+
+	std::cout << std::endl;
+	std::cout << "Copie de Cat[0] vers Cat[1]" << std::endl;
+	(*(Cat *)test[6]) = (*(Cat *)test[5]);
+	std::cout << std::endl;
+	std::cout << "Impression de la première idée des 2 premiers Cat" << std::endl;
+	std::cout << "1:" << (*(Cat *)test[5]).getIdea(0) << "\n2:" << (*(Cat *)test[6]).getIdea(0) << std::endl;
+
+
+	std::cout << std::endl;
+	std::cout << "Delete de tout les animaux" << std::endl;
 	for (int i = 0; i < 10; i++)
 		delete test[i];
-
 	return 0;
 }
