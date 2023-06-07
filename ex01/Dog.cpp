@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 11:02:49 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/07 15:32:24 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/07 15:47:08 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,13 @@ std::string	Dog::getType() const{
 }
 
 void	Dog::setIdea(std::string str, int i) {
-	this->brain->ideas[i] = str;
+	if (i >= 0 && i < 100)
+		this->brain->ideas[i] = str;
 	return;
 }
 
 std::string	Dog::getIdea(int i) {
-	return this->brain->ideas[i];
+	if (i >= 0 && i < 100)
+		return this->brain->ideas[i];
+	return (NULL);
 }
