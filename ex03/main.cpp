@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 16:27:38 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/08 14:51:27 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/08 14:57:00 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(void) {
 	AMateria *d = new Cure();
 
 	std::cout << "\n Equip Ice" << std::endl;
+	character->equip(a);
 	character->equip(a);
 	character->equip(c);
 	std::cout << "\n Equip Cure" << std::endl;
@@ -56,7 +57,6 @@ int	main(void) {
 	std::cout << "\n Delete Ice temp" << std::endl;
 	delete temp;
 
-
 	std::cout << "\n Delete character" << std::endl;
 	delete character;
 
@@ -74,10 +74,8 @@ int	main(void) {
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
-	//delete(tmp);
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
-	//delete(tmp);
 
 	ICharacter* bob = new Character("bob");
 

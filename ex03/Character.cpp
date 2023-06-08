@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 09:22:59 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/08 14:51:17 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/08 14:56:46 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,17 @@ const std::string &Character::getName() const {
 }
 
 void Character::equip(AMateria* m) {
+	for (int i = 0; i < 4; i++) {
+		if (inventory[i] == m) {
+			std::cout << "Materia already equiped" << std::endl;
+			return;
+		}
+	}
 	if (this->inventory_used < 4){
 		int i = 0;
 		while (inventory[i])
 			i++;
+		std::cout << "Equipping " << m->getType() << " materia" << std::endl;
 		this->inventory[i] = m;
 		this->inventory_used++;
 	}
