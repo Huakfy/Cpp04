@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 09:22:59 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/08 12:07:04 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/08 12:19:44 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void Character::equip(AMateria* m) {
 void Character::unequip(int idx) {
 	if (inventory_used > 0 && idx >= 0 && idx < 4) {
 		if (this->inventory[idx]) {
+			std::cout << "Unnequiping Materia " << inventory[idx]->getType() << " from slot " << idx << std::endl;
 			this->inventory[idx] = NULL;
 			this->inventory_used--;
 		}
