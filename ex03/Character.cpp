@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 09:22:59 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/08 12:19:44 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/08 13:08:34 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ Character::~Character() {
 }
 
 Character::Character(std::string name) {
-	std::cout << "Character parametric constructor" << std::endl;
+	std::cout << "Character parametric constructor for " << name << std::endl;
 	this->_name = name;
 	this->inventory_used = 0;
 	for (int i = 0; i < 4; i++)

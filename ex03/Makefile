@@ -3,12 +3,12 @@ NAME	=	ex03.exe
 CC		=	c++
 FLAG	=	-Wall -Wextra -Werror -std=c++98
 #Source
-FILES	=	main AMateria Ice Cure Character
+FILES	=	main AMateria Ice Cure Character MateriaSource
 FFORMAT	=	cpp
 SRC_DIR	=
 OBJ_DIR	=	obj/
 #Header
-HFILES	=	AMateria Ice Cure ICharacter Character
+HFILES	=	AMateria Ice Cure ICharacter Character IMateriaSource MateriaSource
 HFORMAT	=	hpp
 HEADER	=	$(addsuffix .$(HFORMAT), $(HFILES))
 
