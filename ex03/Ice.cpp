@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 20:40:24 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/08 11:15:59 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/08 14:30:40 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ Ice::~Ice() {
 
 Ice *Ice::clone() const {
 	Ice *ret = new Ice();
-	ret->type = this->type;
 	return ret;
 }
 

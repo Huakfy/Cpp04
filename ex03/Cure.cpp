@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 20:58:46 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/08 11:15:48 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/08 14:30:45 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ Cure::~Cure() {
 
 Cure *Cure::clone() const {
 	Cure *ret = new Cure();
-	ret->type = this->type;
 	return ret;
 }
 

@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 09:22:59 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/08 13:08:34 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/08 14:51:17 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,13 @@ void Character::equip(AMateria* m) {
 		int i = 0;
 		while (inventory[i])
 			i++;
-		this->inventory[i] = m->clone();
+		this->inventory[i] = m;
 		this->inventory_used++;
 	}
-	else
+	else {
 		std::cout << "Inventory full" << std::endl;
+		delete m;
+	}
 	return;
 }
 
