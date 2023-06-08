@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:47:21 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/08 13:20:03 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/08 14:10:04 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,13 @@ MateriaSource::~MateriaSource() {
 }
 
 void MateriaSource::learnMateria(AMateria* materia) {
-	this->mat[this->nb] = materia->clone();
-	this->nb++;
+	if (this->nb < 4) {
+		std::cout << "Learning materia " << materia->getType() << std::endl;
+		this->mat[this->nb] = materia->clone();
+		this->nb++;
+	}
+	else
+		std::cout << "Materia source full" << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type) {
