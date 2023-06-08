@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 17:16:31 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/07 21:06:31 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/08 10:24:25 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ AMateria	&AMateria::operator=(const AMateria &src) {
 }
 
 AMateria::~AMateria() {
-	std::cout << "AMateria destructor" << std::endl;
+	std::cout << "AMateria destructor for " << this->type << std::endl;
 	return;
 }
 
@@ -43,4 +43,9 @@ AMateria::AMateria(const std::string &type) {
 
 std::string const & AMateria::getType() const {
 	return this->type;
+}
+
+void AMateria::use(ICharacter& target) {
+	std::cout << "Using Unknown materia won't do anything to " << target.getName() << std::endl;
+	return;
 }

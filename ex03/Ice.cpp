@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 20:40:24 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/07 20:51:13 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/08 11:15:59 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,9 @@ Ice *Ice::clone() const {
 	Ice *ret = new Ice();
 	ret->type = this->type;
 	return ret;
+}
+
+void Ice::use(ICharacter& target) {
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	return;
 }
