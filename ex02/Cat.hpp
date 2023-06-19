@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 11:11:10 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/07 16:11:34 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/19 10:49:40 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Cat : public AAnimal {
 		Cat();
 		Cat(const Cat &src);
 		Cat	&operator=(const Cat &src);
-		~Cat();
+		virtual	~Cat();
 
 		virtual void	makeSound() const;
 		virtual std::string	getType() const;

@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 11:02:56 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/07 11:31:06 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/19 10:53:47 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Dog : public Animal {
 		Dog();
 		Dog(const Dog &src);
 		Dog	&operator=(const Dog &src);
-		~Dog();
+		virtual	~Dog();
 
 		virtual void	makeSound() const;
 		virtual std::string	getType() const;
